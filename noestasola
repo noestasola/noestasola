@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NoEstásSola – Salud mental</title>
+  <meta name="description" content="NoEstásSola es un espacio seguro con información y recursos sobre salud mental, incluyendo videos educativos y líneas de ayuda." />
+  <link rel="icon" type="image/jpeg" href="logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f172a;--card:#111827;--accent:#7c3aed;--text:#e5e7eb;--muted:#94a3b8;--success:#22c55e;--danger:#ef4444}
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;background:radial-gradient(1200px 600px at 10% -10%, rgba(124,58,237,.25), transparent), var(--bg);color:var(--text)}
+    a{color:var(--accent);text-decoration:none}
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(15,23,42,.9), rgba(15,23,42,.6) 60%, transparent);backdrop-filter: blur(6px)}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}
+    .logo img{height:40px;border-radius:50%}
+    .cta{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid rgba(255,255,255,.1);border-radius:12px;background:rgba(255,255,255,.04)}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:58px 0 28px}
+    .hero h1{font-size:clamp(32px,4.2vw,52px);line-height:1.05;margin:0 0 14px}
+    .hero p{color:var(--muted);font-size:clamp(16px,2.2vw,18px);margin:0 0 22px}
+    .hero .card{border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg, rgba(17,24,39,.9), rgba(17,24,39,.6));border-radius:20px;padding:18px;text-align:center}
+    .hero .card img{max-width:220px;margin:0 auto 10px;display:block}
+    .pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:8px 12px;font-size:12px;color:var(--muted)}
+    .grid{display:grid;gap:18px}
+    .videos{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:24px 0}
+    .video{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:#000;aspect-ratio:16/9}
+    iframe{width:100%;height:100%;border:0}
+    section{padding:36px 0}
+    h2{font-size:clamp(22px,3vw,28px);margin:0 0 10px}
+    .sub{color:var(--muted);margin:0 0 16px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .card{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:16px;padding:16px}
+    .badge{display:inline-block;font-size:12px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.4);color:#e9d5ff;padding:6px 10px;border-radius:999px;margin-bottom:8px}
+    footer{border-top:1px dashed rgba(255,255,255,.12);padding:26px 0 46px;color:var(--muted);text-align:center}
+    footer img{height:50px;display:block;margin:0 auto 12px}
+    .desc{font-size:14px;color:var(--muted);margin-top:6px;line-height:1.5}
+    /* Contact form */
+    form{display:grid;gap:12px}
+    label{font-size:14px;color:var(--muted)}
+    input, textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--text)}
+    textarea{min-height:120px;resize:vertical}
+    .btn{cursor:pointer;display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(124,58,237,.25)}
+    .note{font-size:12px;color:var(--muted)}
+    .ok{color:var(--success)}
+    .err{color:var(--danger)}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.hero .visual{order:-1}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="logo" aria-label="NoEstásSola">
+        <img src="logo.jpg" alt="Logo NoEstásSola">
+        <span>No<strong>Estás</strong>Sola</span>
+      </div>
+      <nav aria-label="principal">
+        <a class="cta" href="#videos">Videos</a>
+        <a class="cta" href="#recursos" style="margin-left:8px">Recursos</a>
+        <a class="cta" href="#contacto" style="margin-left:8px">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <span class="pill">🧠 Bienestar emocional</span>
+        <h1>No estás sola: tu espacio seguro sobre salud mental</h1>
+        <p>
+          Información clara, videos de confianza y recursos de ayuda. Esta página es un punto de partida, no un sustituto de atención profesional.
+        </p>
+        <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px">
+          <a class="cta" href="#videos">📺 Ver videos</a>
+          <a class="cta" href="#recursos">📚 Recursos</a>
+        </div>
+      </div>
+      <div class="visual card" aria-hidden="true">
+        <img src="logo.jpg" alt="Logo NoEstásSola">
+        <p class="sub" style="margin-top:8px">“Porque entender es el primer paso”</p>
+      </div>
+    </section>
+
+    <section id="videos" aria-labelledby="videos-title">
+      <h2 id="videos-title">Videos sobre salud mental</h2>
+      <p class="sub">Una selección para empezar. Cada tema incluye un recurso confiable para ampliar la información.</p>
+
+      <div class="grid videos">
+        <article>
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/iEdv9X8JbsA" title="Ansiedad: ¿qué es y cómo manejarla?" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="desc">Introducción a la ansiedad, sus síntomas y cómo afrontarla. <a href="https://www.cdc.gov/mentalhealth/spanish/learn/anxiety/index.htm" target="_blank">CDC: Ansiedad</a></p>
+        </article>
+
+        <article>
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/4CdM4_k6glQ" title="Depresión: señales y apoyo" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="desc">Video de la OMS sobre la depresión (“Perro negro”). <a href="https://www.who.int/es/news-room/fact-sheets/detail/depression" target="_blank">OMS: Depresión</a></p>
+        </article>
+
+        <article>
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/S2G631CzMII" title="Síndrome de Tourette explicado" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="desc">Explicación introductoria del síndrome de Tourette. <a href="https://www.mayoclinic.org/es/diseases-conditions/tourette-syndrome/symptoms-causes/syc-20350465" target="_blank">Mayo Clinic: Tourette</a></p>
+        </article>
+
+        <article>
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/KDUDetKFUa8" title="Agorafobia: afrontamiento y tratamiento" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="desc">Qué es la agorafobia y cómo buscar ayuda. <a href="https://medlineplus.gov/spanish/ency/article/000920.htm" target="_blank">MedlinePlus: Agorafobia</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="recursos" aria-labelledby="recursos-title">
+      <h2 id="recursos-title">Recursos y ayuda</h2>
+      <p class="sub">Si tú o alguien cercano está en peligro inmediato, llama a emergencias.</p>
+      <div class="cards">
+        <div class="card">
+          <span class="badge">España</span>
+          <ul style="margin:0;padding-left:18px;line-height:1.7">
+            <li>🚨 <strong>Emergencias:</strong> 112</li>
+            <li>🟢 <strong>Línea 024</strong> (conducta suicida): 024</li>
+            <li>📞 <strong>Teléfono de la Esperanza:</strong> 717 003 717</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="badge">Autocuidado</span>
+          <ul style="margin:0;padding-left:18px;line-height:1.7">
+            <li>Diario de emociones (3 minutos al día).</li>
+            <li>Respiración 4‑7‑8 o caja (1‑2 minutos).</li>
+            <li>Rutina de sueño y movimiento suave.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="badge">Aviso</span>
+          <p style="margin:0;color:var(--muted)">Esta web no reemplaza la atención psicológica o psiquiátrica. Si te sientes en riesgo, busca ayuda profesional.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="contacto-title">
+      <h2 id="contacto-title">Contacto</h2>
+      <p class="sub">¿Preguntas, sugerencias o necesitas orientación para encontrar recursos? Escríbenos.</p>
+      <div class="card" style="max-width:720px;margin:0 auto">
+        <form id="contactForm" novalidate>
+          <div>
+            <label for="name">Nombre</label>
+            <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required>
+          </div>
+          <div>
+            <label for="subject">Asunto</label>
+            <input id="subject" name="subject" type="text" placeholder="Motivo del mensaje" required>
+          </div>
+          <div>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" placeholder="Cuéntanos en qué podemos ayudarte" required></textarea>
+          </div>
+          <div class="note">Al enviar, se abrirá tu aplicación de correo con el mensaje preparado para <strong>noestassolatwitch@gmail.com</strong>.</div>
+          <button class="btn" type="submit">✉️ Enviar</button>
+          <p id="formStatus" class="note" aria-live="polite" style="margin-top:6px"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <img src="logo.jpg" alt="Logo NoEstásSola">
+      <p>© <span id="year"></span> NoEstásSola · Hecho con ❤️ para acompañarte.<br>
+      ✉️ <a href="mailto:noestassolatwitch@gmail.com">noestassolatwitch@gmail.com</a> · <a href="#">Privacidad</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Construye mailto al enviar
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const subject = encodeURIComponent(document.getElementById('subject').value.trim());
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+
+      if(!name || !email || !subject || !message){
+        status.textContent = 'Por favor, completa todos los campos.';
+        status.className = 'note err';
+        return;
+      }
+
+      const body = `Nombre: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMensaje:%0D%0A${message}`;
+      const link = `mailto:noestassolatwitch@gmail.com?subject=${subject}&body=${body}`;
+      status.textContent = 'Abriendo tu cliente de correo…';
+      status.className = 'note ok';
+      window.location.href = link;
+      form.reset();
+    });
+  </script>
+</body>
+</html>
